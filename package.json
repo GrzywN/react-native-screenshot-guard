@@ -41,12 +41,17 @@
   ],
   "scripts": {
     "example": "yarn workspace react-native-screenshot-guard-example",
+    "start": "yarn example start",
+    "android": "yarn example android",
+    "ios": "yarn example ios",
+    "format": "prettier --write \"src/**/*.{js,ts,tsx}\"",
+    "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "typecheck": "tsc",
+    "build": "bob build",
+    "test": "jest",
     "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build lib",
     "prepare": "bob build",
-    "typecheck": "tsc",
-    "test": "jest",
-    "release": "release-it --only-version",
-    "lint": "eslint \"**/*.{js,ts,tsx}\""
+    "release": "release-it --only-version"
   },
   "keywords": [
     "react-native",
@@ -78,7 +83,7 @@
     "@types/react": "19.2.14",
     "commitlint": "20.4.3",
     "del-cli": "7.0.0",
-    "eslint": "10.0.3",
+    "eslint": "9.39.4",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-prettier": "5.5.5",
     "jest": "30.3.0",
