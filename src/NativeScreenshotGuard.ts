@@ -1,7 +1,9 @@
 import { TurboModuleRegistry, type TurboModule } from 'react-native';
 
 export interface Spec extends TurboModule {
-  multiply(a: number, b: number): number;
+  enableProtectionAsync(): Promise<void>;
+  disableProtectionAsync(): Promise<void>;
+  isProtectionEnabled(): boolean;
 }
 
 export default TurboModuleRegistry.getEnforcing<Spec>('ScreenshotGuard');
